@@ -1,1 +1,1 @@
-# This directory contains all Exercism.io tracks.
+# Exercism.io Tracks
