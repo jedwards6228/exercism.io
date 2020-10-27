@@ -1,6 +1,6 @@
 def slices(series, length):
-    if length <= 0:
-        raise Exception("Invalid Length")
+    if length > len(series) or length <= 0:
+        raise_value_error()
     digit_list = [str(x) for x in str(series)]
     num_list = []
     i = 0
@@ -12,6 +12,8 @@ def slices(series, length):
             pos += 1
         num_list.append(new_num)
         i += 1
-    if len(num_list) == 0:
-        raise Exception("Invalid Parameter(s)")
     return num_list
+
+
+def raise_value_error():
+    raise ValueError('Something went wrong.')
