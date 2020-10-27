@@ -1,1 +1,1 @@
-# Python Track for Exercism.io
+# This directory contains all Exercism.io tracks.
