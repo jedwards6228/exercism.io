@@ -1,6 +1,6 @@
 def slices(series, length):
     if length > len(series) or length <= 0:
-        raise_value_error()
+        raise ValueError('Something went wrong.')
     digit_list = [str(x) for x in str(series)]
     num_list = []
     i = 0
@@ -13,7 +13,3 @@ def slices(series, length):
         num_list.append(new_num)
         i += 1
     return num_list
-
-
-def raise_value_error():
-    raise ValueError('Something went wrong.')
