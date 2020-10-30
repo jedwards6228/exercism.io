@@ -2,26 +2,20 @@ import random
 
 
 class Robot:
+
+    used_name = []
+    name = ''
+
     def __init__(self):
-        self.name = self.robot_name()
-        self.used_names = []
+        self.
 
     def robot_name(self):
-        name = ""
-        while len(name) < 5:
-            while len(name) < 2:
-                name = self.add_let(name)
-            name = self.add_num(name)
-            if len(name) == 5:
-                if name in self.used_names:
-                    name = ""
-        self.used_names.append(name)
-        return name
-
-    def add_let(self, name):
-        name += random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        return name
-
-    def add_num(self, name):
-        name += str(random.randint(0, 9))
-        return name
+        while len(self.name) < 5:
+            while len(self.name) < 2:
+                self.name += random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+            self.name += str(random.randint(0, 9))
+            if len(self.name) == 5:
+                if self.name in self.used_name:
+                    self.name = ''
+        self.used_name.append(self.name)
+        return self.name
